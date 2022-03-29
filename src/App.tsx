@@ -1,11 +1,19 @@
-import './styles.scss';
+import { useState } from 'react';
+import { MantineProvider, ColorSchemeProvider, ColorScheme } from '@mantine/core';
+import Shell from "./components/Shell"
 
-function App() {
+function Client() {
+  const [colorScheme, setColorScheme] = useState<ColorScheme>('dark');
+  const toggleColorScheme = (value?: ColorScheme) =>
+    setColorScheme(value || (colorScheme === 'dark' ? 'light' : 'dark'));
+
   return (
-    <div className="App">
-      <h1>Hello World</h1>
-    </div>
+    <ColorSchemeProvider colorScheme={colorScheme} toggleColorScheme={toggleColorScheme}>
+      <MantineProvider theme={{ colorScheme }}>
+        <Shell />
+      </MantineProvider>
+    </ColorSchemeProvider>
   );
 }
 
-export default App;
+export default Client;
