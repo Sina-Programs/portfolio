@@ -4,8 +4,8 @@ import Shell from "./components/Shell"
 
 function Client() {
   const [colorScheme, setColorScheme] = useState<ColorScheme>('dark');
-  const toggleColorScheme = (value?: ColorScheme) =>
-    setColorScheme(value || (colorScheme === 'dark' ? 'light' : 'dark'));
+  const toggleColorScheme = () =>
+    setColorScheme(colorScheme === 'dark' ? 'light' : 'dark');
 
   return (
     <ColorSchemeProvider colorScheme={colorScheme} toggleColorScheme={toggleColorScheme}>

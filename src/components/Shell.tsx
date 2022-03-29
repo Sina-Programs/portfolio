@@ -1,14 +1,15 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import {
   AppShell,
   Navbar,
   Header,
   Footer,
   Text,
-  MediaQuery,
+  Grid,
   Burger,
   useMantineTheme,
 } from '@mantine/core';
+import ColorSchemeToggle from './Buttons/color-scheme-toggle';
 
 export default function Shell() {
   const theme = useMantineTheme();
@@ -16,27 +17,31 @@ export default function Shell() {
   
   return (
     <AppShell
+      fixed
       styles={{
         main: {
           background: theme.colorScheme === 'dark' ? theme.colors.dark[8] : theme.colors.gray[0],
+          color: theme.colorScheme == "dark" ? "whitesmoke" : "black"
         },
       }}
-      navbarOffsetBreakpoint="sm"
-      fixed
+
       navbar={
-        <Navbar p="md" hiddenBreakpoint="sm" hidden={!opened} width={{ sm: 200, lg: 300 }}>
+        <Navbar p="md" hiddenBreakpoint={5000} hidden={!opened} width={{ sm: 200, lg: 300 }} sx={{color: theme.colorScheme == "dark" ? "whitesmoke" : "black"}}>
           <Text>Application navbar</Text>
         </Navbar>
       }
+      navbarOffsetBreakpoint={opened ? "sm" : 5000}
+
       footer={
-        <Footer height={60} p="md">
+        <Footer height={60} p="md" sx={{color: theme.colorScheme == "dark" ? "whitesmoke" : "black"}}>
           Application footer
         </Footer>
       }
+
       header={
-        <Header height={70} p="md">
-          <div style={{ display: 'flex', alignItems: 'center', height: '100%' }}>
-            <MediaQuery largerThan="sm" styles={{ display: 'none' }}>
+        <Header height={60} p="md" sx={{color: theme.colorScheme == "dark" ? "whitesmoke" : "black"}}>
+          <Grid justify="space-between">
+            <Grid.Col span={3} style={{display: "flex", alignItems: "center", justifyContent: "flex-start"}}>
               <Burger
                 opened={opened}
                 onClick={() => setOpened((o) => !o)}
@@ -44,11 +49,14 @@ export default function Shell() {
                 color={theme.colors.gray[6]}
                 mr="xl"
               />
-            </MediaQuery>
-
-            <Text>Application header</Text>
-            
-          </div>
+            </Grid.Col>
+            <Grid.Col span={3} style={{display: "flex", alignItems: "center", justifyContent: "center"}}>
+              <Text>Sina</Text>
+            </Grid.Col>
+            <Grid.Col span={3} style={{display: "flex", alignItems: "center", justifyContent: "flex-end"}}>
+              <ColorSchemeToggle />
+            </Grid.Col>
+          </Grid>
         </Header>
       }
     >
