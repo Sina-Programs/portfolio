@@ -43,9 +43,9 @@ export default function Shell() {
               <Burger
                 opened={opened}
                 onClick={() => setOpened((o) => !o)}
-                size="sm"
-                color={theme.colors.gray[6]}
-                mr="xl"
+                size="md"
+                color={theme.colorScheme === 'dark' ? theme.colors.gray[5] : theme.colors.gray[8]}
+                mr="sm"
               />
               <Text
                 component="span"
