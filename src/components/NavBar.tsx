@@ -11,9 +11,7 @@ interface ButtonContent {
     text: string
 }
 
-
 const NavBar = (props: NavProps) => {
-
     let theme: MantineTheme = useMantineTheme();
     const buttonContent: ButtonContent[] = [
         {icon: Home, text: 'Home'}, 
@@ -33,15 +31,15 @@ const NavBar = (props: NavProps) => {
                 <hr style={{width: '90%', borderColor: 'grey'}}/>
                 <Paper p="lg" sx={{display: 'flex', flexDirection: 'column', alignItems: 'center', height: '20%'}}>
                     <Text sx={{fontFamily: 'Roboto', fontSize: 16}}>
-                    Portfolio
+                        Portfolio
                     </Text>
                     <Text sx={{fontFamily: 'Roboto'}}>by</Text>
                     <Text 
-                    size='xl'
-                    variant='text'
-                    sx={{marginTop: 5, marginBottom: 5, fontFamily: 'sauna-new', fontWeight: 700, fontStyle: 'italic', fontSize: 28}}
+                        size='xl'
+                        variant='text'
+                        sx={{marginTop: 5, marginBottom: 5, fontFamily: 'sauna-new', fontWeight: 700, fontStyle: 'italic', fontSize: 28}}
                     >
-                    Sina Nikmaram
+                        Sina Nikmaram
                     </Text>
                 </Paper>
             </Navbar>
