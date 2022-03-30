@@ -37,8 +37,8 @@ export default function Shell() {
       }}
 
       header={
-        <Header height={60} p="md" sx={{color: theme.colorScheme === "dark" ? "whitesmoke" : "black"}}>
-          <Grid justify="space-between">
+        <Header height={60} p="md" sx={{color: theme.colorScheme === "dark" ? "whitesmoke" : "black" }}>
+          <Grid justify="space-between" align='center'>
             <Grid.Col span={3} style={{display: "flex", alignItems: "center", justifyContent: "flex-start"}}>
               <Burger
                 opened={opened}
@@ -46,6 +46,7 @@ export default function Shell() {
                 size="md"
                 color={theme.colorScheme === 'dark' ? theme.colors.gray[5] : theme.colors.gray[8]}
                 mr="sm"
+                sx={{marginTop: -2}}
               />
               <Text
                 component="span"
@@ -74,6 +75,8 @@ export default function Shell() {
                 {buttonContent.map((content: Content) => {
                   return <NavOption icon={content.icon} text={content.text}></NavOption>
                 })}
+                <hr style={{width: '80%', borderColor: 'grey'}}/>
+
             </Navbar>
           )}
         </Transition>
