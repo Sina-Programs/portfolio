@@ -7,9 +7,11 @@ import {
   Grid,
   Burger,
   useMantineTheme,
-  Transition
+  Transition,
+  Paper,
+  MantineTheme
 } from '@mantine/core';
-import { Home, User, Terminal2, Brush, MessageCircle, Icon } from 'tabler-icons-react'
+import { Home, User, Terminal2, Brush, MessageCircle, Icon, Heart } from 'tabler-icons-react'
 import ColorSchemeToggle from './Buttons/color-scheme-toggle';
 import NavOption from "./Buttons/nav-option"
 import HomePage from "./Pages/Home"
@@ -21,7 +23,7 @@ interface Content {
 
 
 export default function Shell() {
-  const theme = useMantineTheme();
+  const theme: MantineTheme = useMantineTheme();
   const [opened, setOpened] = useState(false);
 
   const buttonContent: Content[] = [{icon: Home, text: 'Home'}, {icon: User, text: 'About Me'}, {icon: Terminal2, text: 'Projects'}, {icon: Brush, text: 'Interests'}, {icon: MessageCircle, text: 'Contact'}];
@@ -75,8 +77,20 @@ export default function Shell() {
                 {buttonContent.map((content: Content) => {
                   return <NavOption icon={content.icon} text={content.text}></NavOption>
                 })}
-                <hr style={{width: '80%', borderColor: 'grey'}}/>
-
+                <hr style={{width: '80%', borderColor: 'grey', marginTop: -2, marginBottom: 17}}/>
+                <Paper shadow="xs" p="lg" withBorder sx={{display: 'flex', flexDirection: 'column', alignItems: 'center', height: '20%'}}>
+                  <Text sx={{marginTop: -12, marginBottom: 5, fontFamily: 'Roboto'}}>
+                    Made with <Heart size={24} color='red' style={{marginLeft: 2, marginBottom: -3}}/>
+                  </Text>
+                  <Text sx={{fontFamily: 'Roboto'}}>by</Text>
+                  <Text 
+                    size='xl'
+                    variant='text'
+                    sx={{marginTop: 5, marginBottom: 5, fontFamily: 'sauna-new', fontWeight: 700, fontStyle: 'italic', fontSize: 26}}
+                    >
+                    Sina Nikmaram
+                  </Text>
+                </Paper>
             </Navbar>
           )}
         </Transition>
