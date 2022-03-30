@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { MantineProvider, ColorSchemeProvider, ColorScheme } from '@mantine/core';
-import Shell from "./components/Shell"
+import Shell from "./Shell"
 
 function Client() {
   const [colorScheme, setColorScheme] = useState<ColorScheme>('dark');
