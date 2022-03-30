@@ -9,7 +9,10 @@ import {
   Burger,
   useMantineTheme,
 } from '@mantine/core';
+import { Home, User, Terminal2, Brush, MessageCircle } from 'tabler-icons-react'
 import ColorSchemeToggle from './Buttons/color-scheme-toggle';
+import NavOption from "./Buttons/nav-menu"
+
 
 export default function Shell() {
   const theme = useMantineTheme();
@@ -21,25 +24,30 @@ export default function Shell() {
       styles={{
         main: {
           background: theme.colorScheme === 'dark' ? theme.colors.dark[8] : theme.colors.gray[0],
-          color: theme.colorScheme == "dark" ? "whitesmoke" : "black"
+          color: theme.colorScheme === "dark" ? "whitesmoke" : "black"
         },
       }}
 
       navbar={
-        <Navbar p="md" hiddenBreakpoint={5000} hidden={!opened} width={{ sm: 200, lg: 300 }} sx={{color: theme.colorScheme == "dark" ? "whitesmoke" : "black"}}>
-          <Text>Application navbar</Text>
+        <Navbar p="md" hiddenBreakpoint={5000} hidden={!opened} width={{ md: 300 }} sx={{color: theme.colorScheme === "dark" ? "whitesmoke" : "black", display: "flex", alignItems: "center"}}>
+            <NavOption icon={Home} text="Dashboard"></NavOption>
+            <NavOption icon={User} text="About Me"></NavOption>
+            <NavOption icon={Terminal2} text="Projects"></NavOption>
+            <NavOption icon={Brush} text="Interests"></NavOption>
+            <NavOption icon={MessageCircle} text="Contact"></NavOption>
+            
         </Navbar>
       }
       navbarOffsetBreakpoint={opened ? "sm" : 5000}
 
       footer={
-        <Footer height={60} p="md" sx={{color: theme.colorScheme == "dark" ? "whitesmoke" : "black"}}>
+        <Footer height={60} p="md" sx={{color: theme.colorScheme === "dark" ? "whitesmoke" : "black"}}>
           Application footer
         </Footer>
       }
 
       header={
-        <Header height={60} p="md" sx={{color: theme.colorScheme == "dark" ? "whitesmoke" : "black"}}>
+        <Header height={60} p="md" sx={{color: theme.colorScheme === "dark" ? "whitesmoke" : "black"}}>
           <Grid justify="space-between">
             <Grid.Col span={3} style={{display: "flex", alignItems: "center", justifyContent: "flex-start"}}>
               <Burger
