@@ -77,10 +77,10 @@ export default function Shell() {
                 {buttonContent.map((content: Content) => {
                   return <NavOption icon={content.icon} text={content.text}></NavOption>
                 })}
-                <hr style={{width: '80%', borderColor: 'grey', marginTop: -2, marginBottom: 17}}/>
-                <Paper shadow="xs" p="lg" withBorder sx={{display: 'flex', flexDirection: 'column', alignItems: 'center', height: '20%'}}>
-                  <Text sx={{marginTop: -12, marginBottom: 5, fontFamily: 'Roboto'}}>
-                    Made with <Heart size={24} color='red' style={{marginLeft: 2, marginBottom: -3}}/>
+                <hr style={{width: '90%', borderColor: 'grey'}}/>
+                <Paper p="lg" sx={{display: 'flex', flexDirection: 'column', alignItems: 'center', height: '20%'}}>
+                  <Text sx={{fontFamily: 'Roboto', fontSize: 16}}>
+                    Portfolio
                   </Text>
                   <Text sx={{fontFamily: 'Roboto'}}>by</Text>
                   <Text 
