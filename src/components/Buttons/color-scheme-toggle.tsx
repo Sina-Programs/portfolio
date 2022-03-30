@@ -7,12 +7,13 @@ let ColorSchemeToggle = () => {
 
   return (
     <ActionIcon
-      variant="outline"
-      color={dark ? 'yellow' : 'blue'}
+      variant={dark ? "outline" : "filled"}
+      color={dark ? 'yellow' : 'indigo'}
       onClick={() => toggleColorScheme()}
       title="Toggle color scheme"
+      size='md'
     >
-      {dark ? <Sun size={18} /> : <MoonStars size={18} />}
+      {dark ? <Sun size={21} /> : <MoonStars size={21} />}
     </ActionIcon>
   );
 }

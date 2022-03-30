@@ -9,7 +9,7 @@ function Client() {
 
   return (
     <ColorSchemeProvider colorScheme={colorScheme} toggleColorScheme={toggleColorScheme}>
-      <MantineProvider theme={{ colorScheme }}>
+      <MantineProvider theme={{ colorScheme, fontSizes: { 'xl': 20 } }}>
         <Shell />
       </MantineProvider>
     </ColorSchemeProvider>

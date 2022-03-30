@@ -1,6 +1,8 @@
 
-export default function AboutMe() {
+const AboutMe = () => {
   return (
     <div>About Me</div>
   )
 }
+
+export default AboutMe
