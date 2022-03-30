@@ -86,7 +86,7 @@ export default function Shell() {
                   <Text 
                     size='xl'
                     variant='text'
-                    sx={{marginTop: 5, marginBottom: 5, fontFamily: 'sauna-new', fontWeight: 700, fontStyle: 'italic', fontSize: 26}}
+                    sx={{marginTop: 5, marginBottom: 5, fontFamily: 'sauna-new', fontWeight: 700, fontStyle: 'italic', fontSize: 28}}
                     >
                     Sina Nikmaram
                   </Text>
