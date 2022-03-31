@@ -22,7 +22,7 @@ const NavBar = (props: NavProps) => {
     ];
 
     return (
-        <Transition mounted={props.opened} transition={window.innerWidth > theme.breakpoints.sm ? 'slide-right' : 'pop'} duration={500} timingFunction="ease">
+        <Transition mounted={props.opened} transition={window.innerWidth > theme.breakpoints.sm ? 'slide-right' : 'pop'} duration={250} timingFunction="ease">
             {(styles) => (
             <Navbar p="md" hiddenBreakpoint={5000} hidden={!props.opened} width={{ sm: 300 }} style={styles}>
                 {buttonContent.map((content: ButtonContent) => {
