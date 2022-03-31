@@ -1,6 +1,7 @@
-import { Transition, Navbar, Paper, MantineTheme, useMantineTheme, Text } from '@mantine/core'
+import { Transition, Navbar, MantineTheme, useMantineTheme } from '@mantine/core'
 import { Icon, Home, User, Terminal2, Brush, MessageCircle } from 'tabler-icons-react'
-import NavOption from './Buttons/nav-option'
+import NavOption from './Buttons/side-nav'
+import NavSign from './Nav-Sign'
 
 interface NavProps {
     opened: boolean
@@ -29,19 +30,7 @@ const NavBar = (props: NavProps) => {
                     return <NavOption icon={content.icon} text={content.text}></NavOption>
                 })}
                 <hr style={{width: '90%', borderColor: 'grey'}}/>
-                <Paper p="lg" sx={{display: 'flex', flexDirection: 'column', alignItems: 'center', height: '20%'}}>
-                    <Text sx={{fontFamily: 'Roboto', fontSize: 16}}>
-                        Portfolio
-                    </Text>
-                    <Text sx={{fontFamily: 'Roboto'}}>by</Text>
-                    <Text 
-                        size='xl'
-                        variant='text'
-                        sx={{marginTop: 5, marginBottom: 5, fontFamily: 'sauna-new', fontWeight: 700, fontStyle: 'italic', fontSize: 28}}
-                    >
-                        Sina Nikmaram
-                    </Text>
-                </Paper>
+                <NavSign />
             </Navbar>
             )}
         </Transition>

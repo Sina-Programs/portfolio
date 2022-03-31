@@ -16,17 +16,19 @@ const HomePic = (props: Props) => {
         overflow: 'hidden', 
         borderRadius: '100%',
         border: `solid 3px ${theme.colors.gray[6]}`,
-        marginTop: -200,
-        marginBottom: 25
         }}>
-            <img src={Sina} style={{
-                height: 500,
-                width: 400,
-                objectFit: 'cover',
-                objectPosition: '100% 50%',
-                marginTop: -15,
-                marginLeft: -45
-            }} />
+            <img 
+                src={Sina} 
+                style={{
+                    height: 500,
+                    width: 400,
+                    objectFit: 'cover',
+                    objectPosition: '100% 50%',
+                    marginTop: -15,
+                    marginLeft: -45
+                }} 
+                alt='Sina at the Vessel in Hudson Yards, New York City'
+            />
         </div>
     )
 }

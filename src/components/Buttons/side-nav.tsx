@@ -6,7 +6,7 @@ interface Props {
     text: string
 }
 
-const NavMenu = (props: Props) => {
+const NavOption = (props: Props) => {
   return (
     <Button 
       fullWidth
@@ -18,11 +18,10 @@ const NavMenu = (props: Props) => {
       styles={(theme) => ({
         root: {
             fontSize: 20,
-            height: 80,
-            marginBottom: 18,
-            marginTop: 5,
+            height: 95,
             fontWeight: 300,
-            fontFamily: 'Roboto, sans-serif'
+            fontFamily: 'Roboto, sans-serif',
+            margin: '10px 10px 0px 0px'
         },
 
         leftIcon: {
@@ -35,4 +34,4 @@ const NavMenu = (props: Props) => {
   )
 }
 
-export default NavMenu
+export default NavOption

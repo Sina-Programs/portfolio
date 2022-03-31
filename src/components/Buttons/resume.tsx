@@ -5,7 +5,7 @@ import { CloudDownload } from 'tabler-icons-react'
 
 type Props = {}
 
-const resume = (props: Props) => {
+const resumeButton = (props: Props) => {
   return (
     <Button
         variant='gradient'
@@ -16,11 +16,10 @@ const resume = (props: Props) => {
         href='../../Assets/Sina_Resume.pdf'
         download="Sina_Nikmaram_Resume.pdf"
         leftIcon={<CloudDownload size={20} />}
-        mt={25}
     >
         Resume
     </Button>
   )
 }
 
-export default resume
+export default resumeButton
