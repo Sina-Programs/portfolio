@@ -18,6 +18,7 @@ const NavOption = (props: Props) => {
       styles={(theme) => ({
         root: {
             fontSize: 20,
+            minHeight: 95,
             height: 95,
             fontWeight: 300,
             fontFamily: 'Roboto, sans-serif',

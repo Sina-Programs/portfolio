@@ -1,6 +1,5 @@
-import { Transition, Container, Text, MantineTheme, useMantineTheme } from '@mantine/core'
+import { Transition, Container, Text, Space } from '@mantine/core'
 import { useState, useEffect } from 'react'
-import { Icon, BrandLinkedin, BrandGithub, News, BrandTwitter } from 'tabler-icons-react'
 import HomePic from '../components/HomePic'
 import ResumeButton from '../components/Buttons/resume'
 
@@ -21,13 +20,13 @@ const Home = () => {
               height: '88vh', 
               display: 'flex',
               flexDirection: 'column',
-              justifyContent: 'center', 
+              justifyContent: 'flex-start', 
               alignItems: 'center' 
             }}
             style={styles}
           >
             <HomePic />
-            <Text sx={{fontSize: 40, fontFamily: 'Roboto', marginBottom: 20}}>Sina Nikmaram</Text>
+            <Text sx={{fontSize: 40, fontFamily: 'Roboto', marginBottom: 60}}>Sina Nikmaram</Text>
             <ResumeButton />
           </Container>
         )}}

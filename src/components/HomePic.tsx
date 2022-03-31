@@ -2,6 +2,7 @@ import {
     MantineTheme,
     useMantineTheme
 } from '@mantine/core'
+import { relative } from 'path'
 //@ts-ignore
 import Sina from '../Assets/Sina.png'
 
@@ -11,11 +12,16 @@ const HomePic = (props: Props) => {
     const theme: MantineTheme = useMantineTheme()
     return (
     <div style={{
-        height: 275, 
-        width: 275, 
+        position: 'relative',
+        display: 'inline-block',
+        minHeight: "275px",
+        height: '275px', 
+        width: "275px", 
         overflow: 'hidden', 
         borderRadius: '100%',
         border: `solid 3px ${theme.colors.gray[6]}`,
+        marginTop: 50,
+        marginBottom: 20,
         }}>
             <img 
                 src={Sina} 

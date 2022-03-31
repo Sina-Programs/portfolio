@@ -1,7 +1,7 @@
 import { Paper, Text } from '@mantine/core'
 
 const NavSign = () => {
-    return (<Paper p="lg" sx={{display: 'flex', flexDirection: 'column', alignItems: 'center', height: '20%'}}>
+    return (<Paper p="lg" sx={{display: 'flex', flexDirection: 'column', alignItems: 'center', minHeight: 129, height: '18%'}}>
         <Text sx={{fontFamily: 'Roboto', fontSize: 16}}>
             Portfolio
         </Text>
