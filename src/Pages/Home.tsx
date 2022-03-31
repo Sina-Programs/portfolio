@@ -1,6 +1,7 @@
-import { Transition, Container, MantineTheme, useMantineTheme } from '@mantine/core'
+import { Transition, Container, Text } from '@mantine/core'
 import { useState, useEffect } from 'react'
 import HomePic from '../components/HomePic'
+import ResumeButton from '../components/Buttons/resume'
 
 const Home = () => {
   const [mounted, setMounted] = useState<boolean>(false)
@@ -13,14 +14,17 @@ const Home = () => {
           <Container 
             fluid 
             sx={{
-              height: '50vh', 
-              display: 'flex', 
+              height: '100vh', 
+              display: 'flex',
+              flexDirection: 'column',
               justifyContent: 'center', 
               alignItems: 'center' 
             }}
             style={styles}
           >
             <HomePic />
+            <Text sx={{fontSize: 40, fontFamily: 'Roboto', marginBottom: 20}}>Sina Nikmaram</Text>
+            <ResumeButton />
           </Container>
         )}}
     </Transition>

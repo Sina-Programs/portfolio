@@ -15,7 +15,9 @@ const HomePic = (props: Props) => {
         width: 275, 
         overflow: 'hidden', 
         borderRadius: '100%',
-        border: `solid 3px ${theme.colors.gray[6]}`
+        border: `solid 3px ${theme.colors.gray[6]}`,
+        marginTop: -200,
+        marginBottom: 25
         }}>
             <img src={Sina} style={{
                 height: 500,
